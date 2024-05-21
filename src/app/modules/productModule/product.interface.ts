@@ -8,7 +8,7 @@ export type Inventory = {
   inStock: boolean;
 };
 
-export type Product = {
+export type ProductData = {
   name: string;
   description: string;
   price: number;
