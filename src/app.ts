@@ -8,6 +8,6 @@ app.use(express.json());
 app.use(cors());
 
 // application routes
-app.use("/api/product", ProductRoute);
+app.use("/api/products", ProductRoute);
 
 export default app;
