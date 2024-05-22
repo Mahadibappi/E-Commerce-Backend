@@ -11,5 +11,8 @@ app.use(cors());
 // application routes
 app.use("/api/products", ProductRoute);
 app.use("/api/orders", OrderRoute);
+app.get("/", (req: Request, res: Response) => {
+  res.send(" Hello world");
+});
 
 export default app;
