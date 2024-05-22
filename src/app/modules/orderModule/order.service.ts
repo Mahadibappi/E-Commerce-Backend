@@ -6,8 +6,9 @@ const createOrder = async (orderData: Order) => {
   return newOrder;
 };
 
-const gerAllOrder = async () => {
-  const getOrder = orderModel.find();
+const getAllOrder = async (email: string) => {
+  const filter = email ? { email } : {};
+  const getOrder = orderModel.find(filter);
   return getOrder;
 };
-export const OrderService = { createOrder, gerAllOrder };
+export const OrderService = { createOrder, getAllOrder };
