@@ -25,7 +25,8 @@ const createProducts = async (req: Request, res: Response) => {
 // get all products
 const getAllProducts = async (req: Request, res: Response) => {
   try {
-    const allProducts = await ProductService.getAllProducts();
+    const searchTerm = req.query.searchTerm as string;
+    const allProducts = await ProductService.getAllProducts(searchTerm);
     res.status(200).json({
       success: true,
       message: "All Product got successfully",
