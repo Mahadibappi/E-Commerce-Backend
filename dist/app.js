@@ -14,4 +14,7 @@ app.use((0, cors_1.default)());
 // application routes
 app.use("/api/products", product_route_1.ProductRoute);
 app.use("/api/orders", order_route_1.OrderRoute);
+app.get("/", (req, res) => {
+    res.send(" Hello world");
+});
 exports.default = app;
