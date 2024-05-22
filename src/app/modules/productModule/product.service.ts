@@ -13,4 +13,16 @@ const getAllProducts = async () => {
   return result;
 };
 
-export const ProductService = { createProductInDB, getAllProducts };
+// get single product
+const singleProduct = async (id: string) => {
+  const result = await ProductModel.findById(id);
+  if (!result) {
+    throw new Error("Product not fond");
+  }
+  return result;
+};
+export const ProductService = {
+  createProductInDB,
+  getAllProducts,
+  singleProduct,
+};
