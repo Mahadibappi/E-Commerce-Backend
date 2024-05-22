@@ -1,4 +1,4 @@
-## run command = npm run start
+## run command = npm run start:dev
 
 ## technology: Typescript,express,mongoose
 ## key fratures :
